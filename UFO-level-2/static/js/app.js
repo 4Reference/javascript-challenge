@@ -58,5 +58,6 @@ let search = () => {
     let eventday = d3.select("#datetime").property("value");
     updateTable(getEvents(eventday,filter));
 }
+d3.select(window).on("load", inputSearch);
 button.on("click", search);
 d3.select("form").on("submit", search);
