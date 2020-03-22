@@ -25,12 +25,12 @@ let updateTable = events => {
     });
 }
 let button = d3.select("#filter-btn");
-let inputSearch = () => {
+let search = () => {
     d3.event.preventDefault();
     let eventday = d3.select("#datetime").property("value");
     let events = getEvents(eventday);
     updateTable(events);
 }
-d3.select(window).on("load", inputSearch);
-button.on("click", inputSearch);
-d3.select("form").on("submit", inputSearch);
+d3.select(window).on("load", search);
+button.on("click", search);
+d3.select("form").on("submit", search);
